@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+//repeates the process until the gn num becomes sinlge digit
+    while (n >= 10) {
+        sum = 0;
+        while (n > 0) {
+            sum=sum+ n % 10;  // Add the last digit to sum
+            n=n/10;        // Remove the last digit
+        }
+        n = sum;
+    }
+    printf("Single digit sum: %d\n", n);
+    return 0;
+}
